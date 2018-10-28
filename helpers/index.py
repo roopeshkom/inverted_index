@@ -29,17 +29,3 @@ def create_dictionary(file_dir):
     
     return dictionary
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
