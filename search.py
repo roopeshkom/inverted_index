@@ -1,4 +1,4 @@
-from helpers.index import create_dictionary 
+from index import create_dictionary 
 
 file_dir = input('Please enter a directory to search: ')
 dictionary = create_dictionary(file_dir)
