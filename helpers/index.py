@@ -19,6 +19,27 @@ def get_contiguous_substrings(word):
             for num in range(1, 1+len(word))[::-1]
             for start in range(num)] 
 
+# Returns a hashtable of substrings mapped to words, files, and their locations
+def create_dictionary(file_dir):
+    dictionary = {}
+    for entry in collect_words(file_dir):
+        for sub in get_contiguous_substrings(entry[0]):
+            if sub in dictionary: dictionary[sub].append(entry)
+            else: dictionary[sub] = [entry]
+    
+    return dictionary
 
-words = collect_words(file_dir='lorem_ipsum')
-print(*words, sep='\n')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
